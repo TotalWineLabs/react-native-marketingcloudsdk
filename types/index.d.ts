@@ -34,6 +34,7 @@ export class MCReactModule {
     static enablePush(): void;
     static disablePush(): void;
     static getSystemToken(): Promise<string>;
+    static setSystemToken(token: string): void;
     static getAttributes(): Promise<Map<string, string>>;
     static setAttribute(key: string, value: string): void;
     static clearAttribute(key: string): void;
