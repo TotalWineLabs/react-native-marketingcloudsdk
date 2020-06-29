@@ -119,6 +119,7 @@ Follow [these instructions](./ios_push.md) to enable push for iOS.
     * [.enablePush()](#MCReactModule.enablePush)
     * [.disablePush()](#MCReactModule.disablePush)
     * [.getSystemToken()](#MCReactModule.getSystemToken) ⇒ <code>Promise.&lt;?string&gt;</code>
+    * [.setSystemToken(token)](#MCReactModule.setSystemToken)
     * [.getAttributes()](#MCReactModule.getAttributes) ⇒ <code>Promise.&lt;Object.&lt;string, string&gt;&gt;</code>
     * [.setAttribute(key, value)](#MCReactModule.setAttribute)
     * [.clearAttribute(key)](#MCReactModule.clearAttribute)
@@ -179,6 +180,19 @@ the device.
 
 - [Android Docs](https://salesforce-marketingcloud.github.io/MarketingCloudSDK-Android/javadocs/6.0/reference/com/salesforce/marketingcloud/messages/push/PushMessageManager.html#getPushToken())
 - [iOS Docs](https://salesforce-marketingcloud.github.io/MarketingCloudSDK-iOS/appledoc/Classes/MarketingCloudSDK.html#//api/name/sfmc_deviceToken)
+
+<a name="MCReactModule.setSystemToken"></a>
+
+### MCReactModule.setSystemToken(token) ⇒ <code>Promise.&lt;?boolean&gt;</code>
+Sets the token used by the Marketing Cloud to send push messages to
+the device.
+
+**Kind**: static method of [<code>MCReactModule</code>](#MCReactModule)  
+**Returns**: <code>Promise.&lt;?string&gt;</code> - A promise to the system token string.  
+**See**
+
+- [Android Docs](https://salesforce-marketingcloud.github.io/MarketingCloudSDK-Android/javadocs/6.0/reference/com/salesforce/marketingcloud/messages/push/PushMessageManager.html#setPushToken(java.lang.String))
+- [iOS Docs](https://salesforce-marketingcloud.github.io/MarketingCloudSDK-iOS/appledoc/Classes/MarketingCloudSDK.html#//api/name/sfmc_setDeviceToken)
 
 <a name="MCReactModule.getAttributes"></a>
 

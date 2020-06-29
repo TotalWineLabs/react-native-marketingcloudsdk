@@ -74,6 +74,10 @@ RCT_EXPORT_METHOD(getSystemToken
     resolve(deviceToken);
 }
 
+RCT_EXPORT_METHOD(setSystemToken : (NSString *_Nonnull)token) {
+    [[MarketingCloudSDK sharedInstance] sfmc_setDeviceToken:[token dataUsingEncoding:NSUTF8StringEncoding]];
+}
+
 RCT_EXPORT_METHOD(setContactKey : (NSString *_Nonnull)contactKey) {
     [[MarketingCloudSDK sharedInstance] sfmc_setContactKey:contactKey];
 }
