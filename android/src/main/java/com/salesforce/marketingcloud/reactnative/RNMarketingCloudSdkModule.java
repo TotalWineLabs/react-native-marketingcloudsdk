@@ -97,6 +97,17 @@ public class RNMarketingCloudSdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void setSystemToken(Promise promise, final String token) {
+        handleAction(new PromiseAction(promise) {
+            @Override
+            void execute(MarketingCloudSdk sdk, @NonNull Promise promise) {
+                sdk.getPushMessageManager().setPushToken(token);
+                promise.resolve(true);
+            }
+        });
+    }
+
+    @ReactMethod
     public void getAttributes(Promise promise) {
         handleAction(new PromiseAction(promise) {
             @Override
